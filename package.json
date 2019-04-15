@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "name": "preact-pwa-native-bridge-example",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "start": "per-env",
+    "start:production": "npm run -s serve",
+    "start:development": "npm run -s dev",
+    "build": "preact build --src ./src/",
+    "serve": "preact build && preact serve",
+    "dev": "preact watch --src ./src/",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-synacor"
+  },
+  "eslintIgnore": [
+    "build/*"
+  ],
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-synacor": "^2.0.2",
+    "identity-obj-proxy": "^3.0.0",
+    "per-env": "^1.0.2",
+    "preact-cli": "^2.1.0"
+  },
+  "dependencies": {
+    "preact": "^8.2.6",
+    "preact-pwa-native-bridge": "0.0.2"
+  }
+}
